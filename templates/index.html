@@ -1,0 +1,117 @@
+{% extends "base.html" %}
+
+{% block title %}Home{% endblock title %}
+{% block body %}
+<div class="container-fluid my-4 text-center">
+    <div class="logo-container mb-4">
+        <img src="/static/logo.jpg" alt="Swaragini Logo" class="img-fluid rounded-circle shadow" style="max-width: 300px;">
+    </div>
+    <div class="welcome-text my-4">
+        <h1 class="display-3 font-weight-bold">Welcome to Swaragini</h1>
+        <p class="lead">
+            <h3>Step into a world where rhythm meets grace, and melodies find their muse.</h3>
+        </p>
+        <hr class="my-4">
+        <p class="lead">At Swaragini, we believe in the transformative power of music and dance. Here, artistry flows like a river, and every beat tells a story. Our community is a vibrant tapestry of diverse dance forms and enchanting musical experiences.
+            Whether you're a seasoned performer or an enthusiastic beginner, Swaragini offers a platform to unleash your creativity and connect with like-minded souls. Dive into our array of workshops, performances, and events that celebrate the joy of artistic expression.</p>
+        <hr class="my-4">
+        <p class="lead">
+            <h1 class="display-4 font-weight-bold">Explore Swaragini</h1>
+        </p>
+    </div>
+</div>
+
+<div class="container-fluid my-4 text-center">
+    <div class="row">
+        <div class="col-md-6 mb-4">
+            <div class="card shadow-sm h-100">
+                <div class="image-container">
+                    <img src="/static/about.jpg" class="card-img-top" alt="About Us" width="250" height="250" />
+                    <div class="text-overlay">
+                        <h5 class="card-title">About Us</h5>
+                        <p class="card-text">Discover our story, our mission, and the vision that drives us.</p>
+                        <a href="/about" class="btn btn-primary">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 mb-4">
+            <div class="card shadow-sm h-100">
+                <div class="image-container">
+                    <img src="/static/core.jpg" class="card-img-top" alt="Core Members" width="250" height="250" />
+                    <div class="text-overlay">
+                        <h5 class="card-title">Core Members</h5>
+                        <p class="card-text">Meet the talented individuals who lead Swaragini.</p>
+                        <a href="/core" class="btn btn-primary">Meet the Team</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid my-4 text-center">
+    <div class="row">
+        <div class="col-md-6 mb-4">
+            <div class="card shadow-sm h-100">
+                <div class="image-container">
+                    <img src="/static/dance.jpg" class="card-img-top" alt="Dance Clubs" width="250" height="250" />
+                    <div class="text-overlay">
+                        <h5 class="card-title">Dance Clubs</h5>
+                        <p class="card-text">Explore various dance forms, from classical to contemporary, and everything in between.</p>
+                        <a href="/dance" class="btn btn-primary">Discover Dance</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 mb-4">
+            <div class="card shadow-sm h-100">
+                <div class="image-container">
+                    <img src="/static/music.jpg" class="card-img-top" alt="Music Clubs" width="250" height="250" />
+                    <div class="text-overlay">
+                        <h5 class="card-title">Music Clubs</h5>
+                        <p class="card-text">Immerse yourself in the world of melodies, rhythms, and harmonious tunes.</p>
+                        <a href="/music" class="btn btn-primary">Discover Music</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid my-4 text-center">
+    <div class="row">
+        <div class="col-md-12 mb-4">
+            <div class="card bg-light text-dark shadow-sm h-100">
+                <div class="card-body">
+                    <h5 class="card-title">Contact Us</h5>
+                    <p class="card-text">We would love to hear from you! Reach out to us for any queries, suggestions, or to join our community.</p>
+                    <a href="/contact" class="btn btn-primary">Get in Touch</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    .image-container {
+        position: relative;
+        display: inline-block;
+    }
+
+    .card-img-top {
+        width: 100;
+        height: 250;
+    }
+
+    .text-overlay {
+        position: absolute;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.5); /* Black background with transparency */
+        color: white;
+        width: 100%;
+        padding: 10px;
+        text-align: center;
+    }
+</style>
+{% endblock body %}

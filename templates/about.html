@@ -1,0 +1,117 @@
+{% extends "base.html" %}
+
+{% block title %}About Us{% endblock title %}
+
+{% block body %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>About Us</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f9f9f9;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+        .centered {
+            text-align: center;
+            padding: 20px;
+        }
+        .section {
+            margin: 40px 0;
+            padding: 30px;
+            background: #fff;
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            text-align: left;
+            position: relative;
+            overflow: hidden;
+        }
+        .section h2 {
+            font-size: 36px;
+            color: #2c3e50;
+            margin-bottom: 20px;
+        }
+        .section p {
+            font-size: 20px;
+            color: #666;
+            line-height: 1.6;
+        }
+        .section img {
+            max-width: 100%;
+            border-radius: 15px;
+            margin-top: 30px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        .section:hover img {
+            transform: scale(1.05);
+        }
+        .btn {
+            display: inline-block;
+            padding: 12px 24px;
+            margin: 10px;
+            font-size: 18px;
+            text-decoration: none;
+            color: #fff;
+            background-color: #4285f4;
+            border-radius: 8px;
+            transition: background-color 0.3s ease;
+            cursor: pointer;
+            border: none;
+        }
+        .btn:hover {
+            background-color: #3367d6;
+        }
+    </style>
+</head>
+<body>
+    <div class="centered">
+        <img src="/static/logo.jpg" alt="Our Logo" style="max-width: 200px;">
+        <h1 style="font-size: 48px; color: #333; margin-top: 20px;">About Us</h1>
+
+        <!-- Our Story Section -->
+        <div class="section">
+            <h2>About The CLub</h2>
+            <p>
+                An intra-university community of cultural celebration, Swaragini is a collective strive to promote and preach the essence of art in the form of dance, music among much more. With events, performances, competitions, guidance and connections, we have created a society of the best artists around.
+Swaragini symbolises a never-ending passion and devotion for the arts, and aims at bringing awareness and celebration to an ancient, yet avant-garde showcase of talent.
+            </p>
+        </div>
+
+        <!-- Our Mission Section -->
+        <div class="section">
+            <h2>Our Mission</h2>
+            <p>Foster Talent: Provide a platform for students to develop and showcase their musical and dance abilities through regular practice sessions, performances, and workshops.
+                Promote Inclusivity: Create an environment where all members, regardless of skill level or background, feel welcome and encouraged to participate.
+                Enhance Cultural Awareness: Organize events that celebrate various musical and dance traditions, ranging from ancient to modern, promoting cultural understanding and appreciation.
+                Encourage Collaboration: Give a basis of collaboration among members to create unique and diverse artistic projects, fostering teamwork and mutual respect.</p>
+        </div>
+
+        <!-- Our Vision Section -->
+        <div class="section">
+            <h2>Our Vision</h2>
+            <p>The motto of Swaragini 'नभ: स्पृशं दीप्तम्', which means 'Touch the Sky with Glory'. This phrase taken from the Bhagwad Gita, inspires artists to achieve excellence, maintaining a relentless pursuit of passion.</p>
+        </div>
+        <!-- What Club Provides in College Section -->
+        <div class="section">
+            <h2>What Our Club Provides in College</h2>
+            <p>
+                Performance Opportunities: Platforms for members to perform in front of an audience, including campus events, concerts, competitions and regular jam sessions.
+                Collaborative Projects: Opportunities to collaborate on creative projects, such as dance routines, musical compositions, and so on, fostering teamwork and artistic innovation.
+                Cultural Exchange: Exposure to diverse traditions from around the world, promoting cultural awareness and appreciation through themed events, festivals, and much more.
+                Leadership and Organizational Skills: Opportunities to take on leadership roles within the club, such as organizing events, managing social media, and coordinating activities, which can enhance members' organizational and management skills.
+                Skill Development: Regular workshops, classes, and practice sessions led by experienced instructors or guest artists to help members hone their musical and dance abilities.
+                Networking: Connecting with fellow members who share similar interests, as well as networking with professional musicians, dancers, and industry experts through club-sponsored events and activities.
+                Personal Growth: Swaragini is a supportive community that encourages self-expression, creativity, and confidence, contributing to the overall personal growth and well-being of members.
+            </p>
+        </div>
+    </div>
+</body>
+</html>
+
+{% endblock body %}

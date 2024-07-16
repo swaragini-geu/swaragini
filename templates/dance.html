@@ -1,0 +1,296 @@
+{% extends "base.html" %}
+
+{% block title %}Dance Clubs{% endblock %}
+
+{% block body %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dance Clubs</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@600&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #f9f9f9;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        .centered {
+            text-align: center;
+            padding: 20px;
+        }
+        .club-section {
+            margin: 40px 0;
+            padding: 20px;
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+        }
+        .club-section h2 {
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 10px;
+            font-size: 16px;
+            text-decoration: none;
+            color: #fff;
+            background-color: #4285f4;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+            cursor: pointer;
+            border: none;
+        }
+        .btn:hover {
+            background-color: #3367d6;
+        }
+        .club-info {
+            margin: 20px auto;
+            text-align: center;
+            opacity: 0;
+            transition: opacity 1s ease;
+        }
+        .club-info img {
+            width: 100%;
+            max-width: 800px;
+            height: auto;
+            border-radius: 12px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .club-info img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+        }
+        .club-info h1 {
+            margin-top: 10px;
+            font-size: 36px;
+            color: #2c3e50;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        .member-section {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .member {
+            margin: 10px;
+            text-align: center;
+            padding: 20px;
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .member:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+        }
+        .member img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid #ddd;
+            margin-bottom: 10px;
+        }
+        .member h3 {
+            margin-top: 10px;
+            font-size: 20px;
+            color: #2c3e50;
+        }
+        .member p {
+            font-size: 16px;
+            color: #666;
+        }
+        .layout {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            margin-bottom: 40px;
+        }
+        .club-info-wrapper, .members-wrapper {
+            flex: 1;
+            margin: 20px;
+            padding: 20px;
+        }
+        .club-info-wrapper {
+            text-align: center;
+        }
+        .members-wrapper {
+            text-align: center;
+        }
+        .club-info img, .member img {
+            margin-bottom: 10px;
+        }
+        .core-title {
+            font-family: 'Raleway', sans-serif;
+            font-size: 48px;
+            color: #2c3e50;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+            margin-bottom: 40px;
+        }
+        .instagram a {
+            color: #e4405f;
+            font-weight: bold;
+            text-decoration: none;
+        }
+        .instagram a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="centered">
+        <h1 class="core-title">Our Dance Clubs</h1>
+        <!-- Dance Club - Uttarayani -->
+        <div class="layout">
+            <div class="club-info-wrapper">
+                <div class="club-info" id="uttarayani">
+                    <img src="/media/Clubs/uttrayani.jpg" alt="Uttarayani Dance Club" width="250" height="250" />
+                    <h1>Uttarayani</h1>
+                    <p>Garhwali dance group</p>
+                    <div class="instagram">
+                        <p>Follow Us On Instagram</p>
+                        <a href="https://www.instagram.com/uttarayani_officials" target="_blank">@uttarayani_officials</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Dance Club - Bhangra Hub -->
+        <div class="layout">
+            <div class="club-info-wrapper">
+                <div class="club-info" id="bhangra">
+                    <img src="/media/Clubs/Bhangra.jpg" alt="Bhangra Hub Dance Club" width="250" height="250" />
+                    <h1>Bhangra Hub</h1>
+                    <p>Punjabi dance group</p>
+                    <div class="instagram">
+                        <p>Follow Us On Instagram</p>
+                        <a href="https://www.instagram.com/the_bhangrahub" target="_blank">@the_bhangrahub</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Dance Club - Bhangra Hub -->
+        <div class="layout">
+            <div class="club-info-wrapper">
+                <div class="club-info" id="jashan">
+                    <img src="/media/Clubs/jashan.jpg" alt="jashan-e-virsa" width="250" height="250" />
+                    <h1>Jashan-e-Virsa</h1>
+                    <p>Folk-Traditional Bhangra Group</p>
+                    <div class="instagram">
+                        <p>Follow Us On Instagram</p>
+                        <a href="https://www.instagram.com/jashn_e_virsa_official" target="_blank">@jashn_e_virsa_official</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Dance Club - Natrang -->
+        <div class="layout">
+            <div class="club-info-wrapper">
+                <div class="club-info" id="natrang">
+                    <img src="/media/Clubs/Natrang.jpg" alt="Natrang Dance Club" width="250" height="250" />
+                    <h1>Team Natrang</h1>
+                    <p>Classical dance group</p>
+                    <div class="instagram">
+                        <p>Follow Us On Instagram</p>
+                        <a href="https://www.instagram.com/teamnatrang" target="_blank">@teamnatrang</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Dance Club - Trons -->
+        <div class="layout">
+            <div class="club-info-wrapper">
+                <div class="club-info" id="trons">
+                    <img src="/media/Clubs/Trons.jpg" alt="Trons Dance Club" width="250" height="250" />
+                    <h1>Team Trons</h1>
+                    <p>Western dance group</p>
+                    <div class="instagram">
+                        <p>Follow Us On Instagram</p>
+                        <a href="https://www.instagram.com/the_trons_" target="_blank">@the_trons_</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Dance Club - Gorkha Paltan -->
+        <div class="layout">
+            <div class="club-info-wrapper">
+                <div class="club-info" id="gorkha">
+                    <img src="/media/Clubs/Gorkha.jpg" alt="Gorkha Paltan Dance Club" width="250" height="250" />
+                    <h1>Gorkha Paltan</h1>
+                    <p>Gorkhali dance group</p>
+                    <div class="instagram">
+                        <p>Follow Us On Instagram</p>
+                        <a href="https://www.instagram.com/gorkhapaltanofficial" target="_blank">@gorkhapaltanofficial</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Dance Club - Magical Feet -->
+        <div class="layout">
+            <div class="club-info-wrapper">
+                <div class="club-info" id="magical">
+                    <img src="/media/Clubs/magical.jpg" alt="Magical Feet Dance Club" width="250" height="250" />
+                    <h1>Magical Feet</h1>
+                    <p>Bollywood dance group</p>
+                    <div class="instagram">
+                        <p>Follow Us On Instagram</p>
+                        <a href="https://www.instagram.com/_magical_feet" target="_blank">@_magical_feet</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Dance Club - ATOMIC HUSTLERZ -->
+        <div class="layout">
+            <div class="club-info-wrapper">
+                <div class="club-info" id="Atomic">
+                    <img src="/media/Clubs/Atomic.jpg" alt="ATOMIC HUSTLERZ" width="250" height="250" />
+                    <h1>The Atomic Hustlerz</h1>
+                    <p>hip hop freestyle group</p>
+                    <div class="instagram">
+                        <p>Follow Us On Instagram</p>
+                        <a href="https://www.instagram.com/atomic_hustlerz" target="_blank">@atomic_hustlerz</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+
+    <script>
+        // JavaScript to display the clubs sequentially
+        const clubs = [
+            'uttarayani', 'bhangra','jashan' ,'natrang', 'trons', 'gorkha', 'magical','Atomic'
+        ];
+
+        let delay = 3000; // 3 seconds
+
+        clubs.forEach((club, index) => {
+            setTimeout(() => {
+                document.getElementById(club).style.opacity = '1';
+            }, delay * index);
+        });
+    </script>
+</body>
+</html>
+{% endblock %}

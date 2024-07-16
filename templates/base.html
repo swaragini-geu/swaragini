@@ -1,0 +1,132 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.rtl.min.css" integrity="sha384-dpuaG1suU0eT09tx5plTaGMLBsfDLzUCCUXOY2j/LSvXYuG6Bqs43ALlhIqAJVRb" crossorigin="anonymous">
+
+  <title>{% block title %}{% endblock title %} SWARAGINI</title>
+
+  <style>
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background-color: #f9f9f9;
+    }
+    .navbar {
+      background: linear-gradient(90deg, rgba(226,85,63,1) 0%, rgba(255,204,0,1) 100%);
+      border-radius: 15px;
+      padding: 10px 20px;
+    }
+    .navbar-brand {
+      display: flex;
+      align-items: center;
+    }
+    .navbar-brand img {
+      margin-right: 10px;
+      border-radius: 50%;
+    }
+    .navbar-brand span {
+      color: #fff;
+      font-weight: bold;
+      font-size: 24px;
+      letter-spacing: 2px;
+    }
+    .nav-link {
+      color: #fff !important;
+      font-size: 16px;
+      font-weight: 500;
+      margin-left: 10px;
+      transition: color 0.3s ease;
+      border-radius: 10px;
+      padding: 5px 10px;
+    }
+    .nav-link:hover {
+      color: #ffcc00 !important;
+      background-color: rgba(255, 255, 255, 0.1);
+    }
+    .nav-item .active {
+      color: #ffcc00 !important;
+    }
+    .form-control {
+      border-radius: 20px;
+      border: 1px solid #ffcc00;
+    }
+    .btn-outline-success {
+      color: #ffcc00;
+      border-color: #ffcc00;
+      border-radius: 20px;
+    }
+    .btn-outline-success:hover {
+      background-color: #ffcc00;
+      color: #fff;
+    }
+    .navbar-toggler {
+      border: none;
+    }
+    .navbar-toggler-icon {
+      background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba%28255, 255, 255, 1%29' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+    }
+  </style>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">
+      <img src="{% static 'logo.jpg' %}" alt="Swaragini Logo" width="30" height="30">
+      <span><b>SWARAGINI</b></span>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link" href="/about">ABOUT US</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/core">CORE MEMBERS</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/dance">DANCE CLUBS</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/music">MUSIC CLUBS</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/contact">CONTACT US</a>
+        </li>
+      </ul>
+      <form class="d-flex" role="search" id="searchForm">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" id="searchInput">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+    </div>
+  </div>
+</nav>
+
+{% block body %}{% endblock body %}
+
+<!-- Bootstrap Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+<script>
+  document.getElementById('searchForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+    let searchTerm = document.getElementById('searchInput').value.toLowerCase();
+    let allContent = document.body.textContent.toLowerCase();
+    
+    if (allContent.includes(searchTerm)) {
+      // Perform your search action here, e.g., highlight results or navigate to relevant section
+      alert('Searching for: ' + searchTerm);
+    } else {
+      alert('No results found for: ' + searchTerm);
+    }
+  });
+</script>
+
+</body>
+</html>

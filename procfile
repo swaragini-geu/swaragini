@@ -1,0 +1,1 @@
+web: gunicorn swaragini.wsgi --log-file -
